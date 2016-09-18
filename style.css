@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+body{
+  font-family: Verdana,arial,sans-serif;
+  font-size: 20px;
+  color: rgba(0,0,0,1);
+  font-weight: normal;
+  text-align: center;
+  background-image: url(imagens/fundos.jpg ) no-reapet ;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+header{
+	width: 1000px;
+	height: 250px;
+	margin: 0 auto;
+
+}
+
+h1{
+	text-align: center;
+	padding: 10px;
+	background-color: #7FFFD4;
+}
+
+h2{
+	text-align: center;
+	padding: 10px;
+	background-color: #7FFFD4;
+}
+
+h3{
+	text-align: center;
+	padding: 10px;
+	background-color: #7FFFD4;
+}
+
+
+#logo{
+	width: 1000px;
+	height: 200px;
+	background-image: url( url(imagens/));	
+	margin: 0 auto;
+}
+#top{
+	width: 1000px;
+	height: 200px;
+	margin: 0 auto;
+  background-color: #20b2aa;
+
+
+}
+
+#tudo{
+	width: 1000px;
+	margin: 0 auto;
+
+
+}
+
+nav{
+  background-color: #000;
+  height: 60px;
+  line-height:60px;
+  display: block;
+  color:#fff;
+ }
+nav ul{
+  margin: 0 auto;
+  padding: 0px;
+  width: 500px;
+}
+nav ul li{
+  list-style: none;
+  float:left;
+}
+nav ul li a{
+  color: #fff;
+  text-transform:uppercase;
+  text-decoration: none;
+  display: block;
+  padding:0 10px;
+  font-weight: bold;
+  transition:background-color 1s;
+}
+nav ul li a:hover, a.active{
+  background-color: #fff;
+  color: #000;
+}
+
+
+
+
+#conteudo{
+	width:1000px;
+	height: 100%;	
+	margin:0 auto;
+
+}
+.sec01{
+  width:970px;
+  padding: 10px;	
+  background-color: #FFF;
+  margin-left:295px;
+  background-image:url(imagens/fundo.png);	
+}
+#conteudo sec01 p{
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+footer{
+	width: 1000px;
+	height: 200px;
+	margin: 0 auto;
+	background-image: url(imagens/vagalumef.png);	
+  background-repeat:  no-reapet;
+
+}
+footer p{
+	margin-bottom: 20px;
+  text-align: justify;
+	color:#000;
+	width:700px;
+	}

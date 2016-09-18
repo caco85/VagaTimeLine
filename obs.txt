@@ -1,0 +1,55 @@
+nome do banco = db_VagaTimeLine
+
+dados:
+ 
+  $id = $resultado["id"];
+  $nome = $resultado["nome"];
+  $email = $resultado["email"];
+  $login = $resultado["login"];
+  $senha = $resultado["senha"];
+  $tpUser = $resultado["tpUser"];
+  $infoPessoal = $resultado["infoPessoal"];
+  $data = $resultado["data"];
+  $conteudo = $resultado["conteudo"];
+  $likes = $resultado["likes"];
+  $localizacao = $resultado["localizacao"];
+  $imagem = $resultado["imagem"];
+
+  
+  echo "Numero do Usuario:   $id <br>Nome :  $nome<br> E-mail: $email<br> Login:   $login<br> Senha:  $senha<br> Tipo de Usuario:   $tpUser<br> infoPessoal:  $infoPessoal<br>Data:  $data<br> Conteudo:   $conteudo<br> Likes:   $likes<br> Localizacao:   $localizacao.<br> Imagem:   $imagem.<br>";
+
+
+
+update -------------------------------------------------
+<h2>Digite o que deseja alterar</h2>
+      <input type="hidden" name="id" value="<?php echo $id;?>"><br/>
+      Nome: <input type="text" name="nome" value="<?php echo $nome;?>"><br/>
+      Login: <input type="text" name="login" value="<?php echo $login;?>"><br/>
+      E-mail: <input type="text" name="email" value="<?php echo $email;?>"><br/>
+      Senha: <input type="text" name="senha" value="<?php echo $senha;?>"><br/>
+      <input type="hidden" name="tpUser" value="<?php echo $tpUser?>"><br/>
+      Info Pessoal: <input type="text" name="infoPessoal" value="<?php echo  $infoPessoal;?>"><br/>
+      Data: <input type="text" name="data" value="<?php echo $data;?>"><br/>
+      Conteudo: <input type="text" name="conteudo" value="<?php echo $conteudo;?>"><br/>
+      Likes: <input type="text" name="likes" value="<?php echo $likes;?>"><br/>
+      Localização: <input type="text" name="localizacao" value="<?php echo $localizacao;?>"><br/>
+      Imagem: <input type="text" name="imagem" value="<?php echo $imagem;?>"><br/>
+
+
+
+$id = mysql_real_escape_string($_POST['id']);
+$nome = mysql_real_escape_string($_POST['nome']);
+$login = mysql_real_escape_string($_POST['login']);
+$email = mysql_real_escape_string($_POST['email']);
+$senha = mysql_real_escape_string($_POST['senha']);
+$infoPessoal = mysql_real_escape_string($_POST['infoPessoal']);
+$data = mysql_real_escape_string($_POST['data']);
+$conteudo = mysql_real_escape_string($_POST['conteudo']);
+$likes = mysql_real_escape_string($_POST['likes']);
+$localizacao = mysql_real_escape_string($_POST['localizacao']);
+$imagem = mysql_real_escape_string($_POST['imagem']);
+
+$sql = ("Update usuario SET nome='$nome', login='$login', email ='$email',senha ='$senha', infoPessoal='$infoPessoal', data='$data',conteudo ='$conteudo',likes='$likes',localizacao ='$localizacao',imagem ='$imagem' where id='$id'");
+
+
+---------------------------------------------------
