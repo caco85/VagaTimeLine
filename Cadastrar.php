@@ -9,7 +9,7 @@
     </head>
     <body>
      <div >
-          <form action="CadastrarNoBanco.php" method="post">
+          <form action="CadastrarNoBanco.php" method="post" enctype="multipart/form-data">
             <table border="1">
               <tr>
               <td>Nome:</td>
@@ -52,9 +52,11 @@
               <td><input type="text" name="localizacao" /></td>
               </tr>
               <tr>
-              <td>Imagem:</td>
-              <td><input type="text" name="imagem" /></td>
+              <tr>
+              <td>SelecionarImagem</td>
+              <td><input type="file" name="imagem"> </td>
               </tr>
+              <tr>
               <!--  <td>Tipo qtdAmigos:</td> tipo Usuario AI-->
               <td><input type="hidden" name="qtdAmigos" value=0 /></td>
               </tr>
@@ -64,6 +66,7 @@
               </tr>
             </table>
           </form>
+            
       </div>
     </body>
 

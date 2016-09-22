@@ -10,15 +10,15 @@
 
 		<body>
 			<?php
+				
+				if ((empty($_SESSION['UsuarioNome']))) {
 
+				require_once("Login.php");
+				require_once("Cadastrar.php");	
 				
-				session_start();
-				if (!isset($_SESSION['UsuarioNome'])) {
-  			  		require_once("Login.php");
-					require_once("Cadastrar.php");	
-				 
 				}
-				
+			
+	
 			?>
 		</body>
 	</div>	
