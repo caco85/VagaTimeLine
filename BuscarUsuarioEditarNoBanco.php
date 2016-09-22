@@ -17,7 +17,6 @@ $senha = mysql_real_escape_string($_POST['senha']);
 $sql = "(SELECT * FROM usuario WHERE login = '$login'  AND senha = '$senha')";
 $query = mysql_query($sql);
 
-
  if (mysql_num_rows($query)!= 1 ){
        header("Location: IndexUsuario.php");
   } 

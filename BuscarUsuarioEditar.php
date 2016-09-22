@@ -1,33 +1,3 @@
-<html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	</head>
-	<body>
-		<form action="BuscarUsuarioEditarNoBanco.php" method="post">
-			<br><br><br>
-			<p>Por motivo de segurança digite login  e senha novamente.</p><br><br>
-
-			<table border="1">
-			<tr>
-			<td>Login:</td>
-			<td><input type="text" name="login" /></td>
-			</tr>
-			<tr>
-			<td>Senha:</td>
-			<td><input type="password" name="senha" /></td>
-			</tr>
-			<tr>
-			<td>&nbsp;</td>
-			<td><input type="submit" value="Entrar" /></td>
-			</tr>
-		</table>
-
-		<br><br><br>
-		<a href=IndexUsuario.php>Voltar</a>
-	 
-	</body>
-</html>
-
 <!doctype html>
 <html>
 

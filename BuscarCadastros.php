@@ -14,21 +14,25 @@ $query = mysql_query($sql);
   $resultado  = mysql_fetch_assoc($query);
 
  while($linha = mysql_fetch_array($query)){ 
-  $id = $resultado["id"];
-  $nome = $resultado["nome"];
-  $email = $resultado["email"];
-  $login = $resultado["login"];
-  $senha = $resultado["senha"];
-  $tpUser = $resultado["tpUser"];
-  $infoPessoal = $resultado["infoPessoal"];
-  $data = $resultado["data"];
-  $conteudo = $resultado["conteudo"];
-  $likes = $resultado["likes"];
-  $localizacao = $resultado["localizacao"];
-  $imagem = $resultado["imagem"];
-  
-  
-  echo "Numero do Usuario:   $id <br>Nome :  $nome<br> E-mail: $email<br> Login:   $login<br> Senha:  $senha<br> Tipo de Usuario:   $tpUser<br> infoPessoal:  $infoPessoal<br>Data:  $data<br> Conteudo:   $conteudo<br> Likes:   $likes<br> Localizacao:   $localizacao.<br> Imagem:   $imagem.<br>";
+    
+       $id = $linha["id"];
+      $nome =$linha["nome"];
+      $email = $linha["email"];
+      $login = $linha["login"];
+      $senha = $linha["senha"];
+      $tpUser = $linha["tpUser"];
+      $infoPessoal = $linha["infoPessoal"];
+      $data = $linha["data"];
+      $conteudo = $linha["conteudo"];
+      $likes = $linha["likes"];
+      $localizacao =$linha["localizacao"];
+      $imagem =$linha["imagem"];
+      $qtdAmigos = $linha['qtdAmigos'];
+        
+       
+     
+
+  echo "Numero do Usuario:   $id <br>Nome :  $nome<br> E-mail: $email<br> Login:   $login<br> Senha:  $senha<br> Tipo de Usuario:   $tpUser<br> infoPessoal:  $infoPessoal<br>Data:  $data<br> Conteudo:   $conteudo<br> Likes:   $likes<br> Localizacao:   $localizacao.<br> Imagem:   $imagem.<br>qtdAmigos:   $qtdAmigos.<br>";
   }
 ?>
 <br><br><br>
@@ -47,7 +51,7 @@ $query = mysql_query($sql);
       <h1>O que deseja fazer?</h1>
       <ul>
         <li><a href=BuscarCadastrosEditar.php>Editar</a></li>
-        <li><a href=ExcluirCadastros.php>Excluir</a></li> 
+        <li><a href=ExcluirUsuario.php>Excluir</a></li> 
         <li><a href=IndexAdmin.php>Voltar</a></li> 
         <li><a href=Logout.php>Sair</a></li> 
       </ul>

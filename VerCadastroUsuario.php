@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html>
-	<div id="tudo">
+	<div class="container">
 		<head>
 			<meta charset="utf-8">
 			<title>Vagalume TimeLine</title>

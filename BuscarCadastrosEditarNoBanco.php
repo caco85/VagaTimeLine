@@ -15,23 +15,25 @@ $query = mysql_query($sql);
        header("Location: IndexAdmin.php");
   } 
 else
-  {db_VagaTimeLine
+  {
   // Salva os dados encontados na variável $resultado
    $resultado = mysql_fetch_assoc($query);
   }
- 	
-  $id = $resultado["id"];
-  $nome = $resultado["nome"];
-  $email = $resultado["email"];
-  $login = $resultado["login"];
-  $senha = $resultado["senha"];
-  $tpUser = $resultado["tpUser"];
-  $infoPessoal = $resultado["infoPessoal"];
-  $data = $resultado["data"];
-  $conteudo = $resultado["conteudo"];
-  $likes = $resultado["likes"];
-  $localizacao = $resultado["localizacao"];
-  $imagem = $resultado["imagem"];
+ 
+    $id = $resultado["id"];
+    $nome = $resultado["nome"];
+    $email = $resultado["email"];
+    $login = $resultado["login"];
+    $senha = $resultado["senha"];
+    $tpUser = $resultado["tpUser"];
+    $infoPessoal = $resultado["infoPessoal"];
+    $data = $resultado["data"];
+    $conteudo = $resultado["conteudo"];
+    $likes = $resultado["likes"];
+    $localizacao = $resultado["localizacao"];
+    $imagem = $resultado["imagem"];
+    $qtdAmigos = mysql_real_escape_string($_POST['qtdAmigos']);
+   
 
 ?>
 
@@ -61,7 +63,7 @@ else
       Likes: <input type="text" name="likes" value="<?php echo $likes;?>"><br/>
       Localização: <input type="text" name="localizacao" value="<?php echo $localizacao;?>"><br/>
       Imagem: <input type="text" name="imagem" value="<?php echo $imagem;?>"><br/>
-
+      Qtd Amigos: <input type="text" name="qtdAmigos" value="<?php echo $qtdAmigos;?>"><br/>
     <input type="submit" value="Alterar" /><br/>
 
       <ul>

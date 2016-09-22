@@ -125,3 +125,7 @@ footer p{
 	color:#000;
 	width:700px;
 	}
+
+  #cadastrar {
+    float:right;
+  }

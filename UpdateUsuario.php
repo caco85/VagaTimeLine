@@ -14,8 +14,9 @@ $conteudo = mysql_real_escape_string($_POST['conteudo']);
 //$likes = mysql_real_escape_string($_POST['likes']);
 $localizacao = mysql_real_escape_string($_POST['localizacao']);
 $imagem = mysql_real_escape_string($_POST['imagem']);
+//$qtdAmigos = mysql_real_escape_string($_POST['qtdAmigos']);
 
-$sql = ("Update usuario SET nome='$nome', login='$login', email ='$email',senha ='$senha', infoPessoal='$infoPessoal', data='$data',conteudo ='$conteudo',likes='$likes',localizacao ='$localizacao',imagem ='$imagem' where id='$id'");
+$sql = ("Update usuario SET nome='$nome', login='$login', email ='$email',senha ='$senha', infoPessoal='$infoPessoal', data='$data',conteudo ='$conteudo',likes='$likes',localizacao ='$localizacao',imagem ='$imagem',qtdAmigos = '$qtdAmigos' where id='$id'");
 
 $query = mysql_query($sql);
 

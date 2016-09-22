@@ -10,18 +10,21 @@ $conteudo = $_POST["conteudo"];
 $likes = $_POST["likes"];
 $localizacao = $_POST["localizacao"];
 $imagem = $_POST["imagem"];
+$qtdAmigos = $_POST["qtdAmigos"];
 
 echo"Conectando ao banco...";
-$sql = mysql_connect("localhost","root", "");
+$sql = mysql_connect("localhost", "root", "");
 $banco = mysql_select_db("db_vtimeline");
 echo"Conexão ok.";
-$inserir= "insert into usuario(nome,email,login,senha,tpUser,infoPessoal,data,conteudo,likes,localizacao,imagem) values ('$nome', '$email', '$login', '$senha','$tpUser','$infoPessoal', '$data', '$conteudo','$likes','$localizacao ','$imagem ')";
+$inserir= "insert into usuario(nome,email,login,senha,tpUser,infoPessoal,data,conteudo,likes,localizacao,imagem,qtdAmigos) values ('$nome', '$email', '$login', '$senha','$tpUser','$infoPessoal', '$data', '$conteudo','$likes','$localizacao ','$imagem ','$qtdAmigos ')";
 mysql_query($inserir, $sql);
 echo"Inserção bem sucedida!";
 
 mysql_close($sql);
 
 //var_dump($sql);
+
+
 
 ?>
 

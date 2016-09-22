@@ -35,20 +35,21 @@ else
        $_SESSION['UsuarioID'] = $resultado['id']; 
        $_SESSION['UsuarioNome'] = $resultado['nome'];
        $_SESSION['TipoUsuario'] = $resultado['tpUser'];
-       
+     
        $tpUser = mb_strtoupper($resultado['tpUser']);
-       var_dump($tpUser);
-       if ($tpUser == 'ADMINISTRADOR') {
+       //var_dump($tpUser);
+    
+      if ($tpUser == 'ADMINISTRADOR') {
          header("Location: IndexAdmin.php");
        }
-       elseif ($tpUser == 'Usuario') {
+      elseif ($tpUser == 'USUARIO') {
          header("Location: IndexUsuario.php");
        }
-       else{
+      else{
         header("Location: Index.php");
         }
        
     }
 
-////var_dump($tpUser);
+
 ?>

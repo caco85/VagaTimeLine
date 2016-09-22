@@ -1,10 +1,3 @@
-<html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	</head>
-
-</html>
-
 <!doctype html>
 <html>
 
@@ -18,20 +11,21 @@
 	<body> 
 		<form action="BuscarCadastrosEditarNoBanco.php" method="post">
 		<br><br><br>
-		<p>Por digite  o numero do usuario para editar.</p><br><br>
+		<p>Por favor digite  o numero do usuario para editar.</p><br><br>
 
 		<table border="1">
-			<tr>
+		<tr>
+			<td>Numero do Usuario:</td>
 			<td><input type="text" name="id" /></td>
-			</tr>
-			<tr>
+		</tr>
+		<tr>
 			<td>&nbsp;</td>
 			<td><input type="submit" value="Entrar" /></td>
 		</tr>
 		</table>
 
 		<br><br><br>
-		<a href=IndexAdmin.php>Voltar</a><td>Numero do Usuario:</td>
+		<a href=IndexAdmin.php>Voltar</a>
 
 	</body>
 </div>
