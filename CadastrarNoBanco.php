@@ -9,26 +9,13 @@ $data = $_POST["data"];
 $conteudo = $_POST["conteudo"];
 $likes = $_POST["likes"];
 $localizacao = $_POST["localizacao"];
-$imagem = $_POST["imagem"];
+//$imagem = $_POST["imagem"];imagem,,'$imagem '
 $qtdAmigos = $_POST["qtdAmigos"];
 
-echo"Conectando ao banco...";
-$sql = mysql_connect("localhost", "root", "");
-$banco = mysql_select_db("db_vtimeline");
-echo"Conexão ok.";
-$inserir= "insert into usuario(nome,email,login,senha,tpUser,infoPessoal,data,conteudo,likes,localizacao,imagem,qtdAmigos) values ('$nome', '$email', '$login', '$senha','$tpUser','$infoPessoal', '$data', '$conteudo','$likes','$localizacao ','$imagem ','$qtdAmigos ')";
-mysql_query($inserir, $sql);
-echo"Inserção bem sucedida!";
-
-mysql_close($sql);
-
-//var_dump($sql);
-
-	//salvar imagem na pasta e no banco
-	$arquivo 	= $_FILES['arquivo']['name'];
+$imagem = $_FILES['imagem']['name'];
 	
 	
-	$_UP['pasta'] = 'foto/';
+	$_UP['pasta'] = 'imagens/';
 	
 	
 	$_UP['tamanho'] = 1024*1024*100; 
@@ -39,20 +26,20 @@ mysql_close($sql);
 	
 	$_UP['renomeia'] = false;
 	
+	//var_dump($_FILES['imagem']);
 	
 	$_UP['erros'][0] = 'Não houve erro';
-	$_UP['erros'][1] = 'O arquivo no upload é maior que o limite do PHP';
-	$_UP['erros'][2] = 'O arquivo ultrapassa o limite de tamanho especificado no HTML';
-	$_UP['erros'][3] = 'O upload do arquivo foi feito parcialmente';
-	$_UP['erros'][4] = 'Não foi feito o upload do arquivo';
+	$_UP['erros'][1] = 'a imagem no upload é maior que o limite do PHP';
+	$_UP['erros'][2] = 'a imagem ultrapassa o limite de tamanho especificado no HTML';
+	$_UP['erros'][3] = 'O upload da imagem foi feito parcialmente';
+	$_UP['erros'][4] = 'Não foi feito o upload da imagem';
 	
-	
-	if($_FILES['arquivo']['error'] != 0){
-		die("Não foi possivel fazer o upload, erro: <br />". $_UP['erros'][$_FILES['arquivo']['error']]);
+	if($_FILES['imagem']['error'] != 0){
+		die("Não foi possivel fazer o upload, erro: <br />". $_UP['erros'][$_FILES['imagem']['error']]);
 		exit; 
 	}
 	
-	$extensao = strtolower(end(explode('.', $_FILES['arquivo']['name'])));
+	$extensao = strtolower(end(explode('.', $_FILES['imagem']['name'])));
 	if(array_search($extensao, $_UP['extensoes'])=== false){		
 		echo "
 			<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost:83/TimeLineVaga/index.php'>
@@ -63,11 +50,11 @@ mysql_close($sql);
 	}
 	
 	
-	else if ($_UP['tamanho'] < $_FILES['arquivo']['size']){
+	else if ($_UP['tamanho'] < $_FILES['imagem']['size']){
 		echo "
 			<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost:83/TimeLineVaga/index.php'>
 			<script type=\"text/javascript\">
-				alert(\"Arquivo muito grande.\");
+				alert(\"imagem muito grande.\");
 			</script>
 		";
 	}
@@ -75,18 +62,16 @@ mysql_close($sql);
 	
 	else{
 		
-		if($UP['renomeia'] == true){
+		if($_UP['renomeia'] == true){
 			
 			$nome_final = time().'.jpg';
 		}else{
 			
-			$nome_final = $_FILES['arquivo']['name'];
+			$nome_final = $_FILES['imagem']['name'];
 		}
 		
-		if(move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta']. $nome_final)){
-			
-			$query = mysqli_query($conn, "INSERT INTO usuario (
-			imagem) VALUES('$nome_final')");
+		if(move_uploaded_file($_FILES['imagem']['tmp_name'], $_UP['pasta']. $nome_final)){
+		
 			echo "
 				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost:83/TimeLineVaga/index.php'>
 				<script type=\"text/javascript\">
@@ -96,15 +81,29 @@ mysql_close($sql);
 		}else{
 			
 			echo "
-				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost;83/TimeLineVaga/index.php'>
+				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost:83/TimeLineVaga/index.php'>
 				<script type=\"text/javascript\">
 					alert(\"Imagem não foi cadastrada com Sucesso.\");
 				</script>
 			";
 		}
 	}
+	
+			
 
 
+
+echo"Conectando ao banco...";
+$sql = mysql_connect("localhost", "root", "");
+$banco = mysql_select_db("db_vtimeline");
+echo"Conexão ok.";
+$inserir= "insert into usuario(nome,email,login,senha,tpUser,infoPessoal,data,conteudo,likes,localizacao,qtdAmigos,imagem) values ('$nome', '$email', '$login', '$senha','$tpUser','$infoPessoal', '$data', '$conteudo','$likes','$localizacao ','$qtdAmigos ','$imagem')";
+mysql_query($inserir, $sql);
+echo"Inserção bem sucedida!";
+
+mysql_close($sql);
+
+//var_dump($sql);
 
 ?>
 

@@ -53,19 +53,22 @@
               </tr>
               <tr>
               <tr>
-              <td>SelecionarImagem</td>
-              <td><input type="file" name="imagem"> </td>
-              </tr>
-              <tr>
+               <td>SelecionarImagem</td>
+                <td><input type="file" name="imagem"> </td>
+               </tr>
+              
               <!--  <td>Tipo qtdAmigos:</td> tipo Usuario AI-->
               <td><input type="hidden" name="qtdAmigos" value=0 /></td>
               </tr>
-              <tr>
-              <td>&nbsp;</td>
-              <td><input type="submit" value="Entrar" /></td>
-              </tr>
-            </table>
+                    
+               
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Cadastrar" /></td>
+                </tr>
+               </table>
+         
           </form>
+
             
       </div>
     </body>
