@@ -29,7 +29,27 @@
 				</div>
 				<div class="container body-content">
 					<div class="span12">
-			
+						<?php        
+							if(isset ($_GET['p'])){
+								$inc = $_GET['p'];
+							}else{
+								$inc = 'home';
+							}
+							if($inc == ""){
+								$inc = 'home';
+							}
+							include $inc.".php";
+							
+							if (!isset($_SESSION)) session_start();
+							{
+							echo "Ola ", $_SESSION['UsuarioNome'] ," Seja bem vindo  <br><br>" ;
+							
+							
+						}
+						
+						require_once("BuscarCadastrosSimp.php");	
+						?>
+						
 					</div>
 				</div>
 
