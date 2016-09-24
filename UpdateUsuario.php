@@ -23,7 +23,6 @@ $query = mysql_query($sql);
 //var_dump($sql);
 echo "Alteração Feita com Susseço,o que deseja fazer?";
  ?>
-tml>
 <html>
 	<div class="jumbotron">
 		<div class="container">

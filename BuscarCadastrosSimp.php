@@ -25,7 +25,13 @@ $query = mysql_query($sql);
       $imagem =$linha["imagem"];
       $qtdAmigos = $linha['qtdAmigos'];
         
-     
-  echo "Numero do Usuario:   $id <br>Nome :  $nome<br> infoPessoal:  $infoPessoal<br>Data:  $data<br> Conteudo:   $conteudo<br> Likes:   $likes<br> Localizacao:   $localizacao.<br> Imagem:   $imagem.<br>qtdAmigos:   $qtdAmigos.<br>";
+    	 
+	
+	
+ // echo "Numero do Usuario:   $id <br>Nome :  $nome<br> infoPessoal:  $infoPessoal<br>Data:  $data<br> Conteudo:   $conteudo<br> Likes:   $likes<br> Localizacao:   $localizacao.<br> Imagem:   $imagem.<br>qtdAmigos:   $qtdAmigos.<br>";
+	echo "<br>{<br>Contudo: $conteudo <br>Data:  $data<br> Likes:   $likes<br>{User:<br> id: $id <br>Nome :  $nome<br>Localizacao:   $localizacao.<br> Imagem:   $imagem.<br>infoPessoal:  $infoPessoal<br>}<br> }";
+	
   }
+  
+  
 ?>

@@ -54,7 +54,6 @@ else
       <title>Vagalume TimeLine</title>
       <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
       <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
-
       </head>
 
       <body>

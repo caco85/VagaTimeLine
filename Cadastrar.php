@@ -1,15 +1,23 @@
 <!doctype html>
 <html>
-  <div class="container"">
-    <head>
-      <meta charset="utf-8">
-      <title>Vagalume TimeLine</title>
-      <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-      <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
-    </head>
-    <body>
-     <div >
-          <form action="CadastrarNoBanco.php" method="post">
+	<div class="jumbotron">
+		<div class="container">
+			<head>
+			<meta charset="utf-8">
+			<title>Vagalume TimeLine</title>
+			<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+			<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+
+			</head>
+
+			<body>
+				<header class="container" >
+					<img src="imagens/vagalumet.jpg" width="1109" height="200"  alt=""/>
+					</img>
+				</header>
+			</br>	
+			 <div class="container" >
+				  <form action="CadastrarNoBanco.php" method="post" enctype="multipart/form-data">
             <table border="1">
               <tr>
               <td>Nome:</td>
@@ -52,20 +60,30 @@
               <td><input type="text" name="localizacao" /></td>
               </tr>
               <tr>
-              <td>Imagem:</td>
-              <td><input type="text" name="imagem" /></td>
-              </tr>
+              <tr>
+               <td>SelecionarImagem</td>
+                <td><input type="file" name="imagem"> </td>
+               </tr>
+              
               <!--  <td>Tipo qtdAmigos:</td> tipo Usuario AI-->
               <td><input type="hidden" name="qtdAmigos" value=0 /></td>
               </tr>
-              <tr>
-              <td>&nbsp;</td>
-              <td><input type="submit" value="Entrar" /></td>
-              </tr>
-            </table>
+                    
+               
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Cadastrar" /></td>
+                </tr>
+               </table>
+         
           </form>
-      </div>
-    </body>
+				</div>	
 
-  </div>
+				<div class"row">
+					<footer>
+						<p>&copy; Vagalume TimeLine 2016- Todos os Diretos Resevados.</p>
+					</footer>
+				</div>
+			</body>
+		</div>
+	</div>
 </html>

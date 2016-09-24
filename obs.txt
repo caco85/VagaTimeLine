@@ -79,8 +79,8 @@ corrigir os formns
 sessão do home
 row de linhas das paginas
 fechar os forms 
-validar se ja existe usuario no banco
-formato do data no banco
+validar se ja existe usuario no banco --
+formato do data no banco --
 corrigir erro ao cadastrar
 
 <!doctype html>

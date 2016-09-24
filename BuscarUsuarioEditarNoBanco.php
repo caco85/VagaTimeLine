@@ -46,7 +46,6 @@ else
       <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 
       </head>
-
       <body>
         <header class="container" >
           <img src="imagens/vagalumet.jpg" width="1109" height="200"  alt=""/>

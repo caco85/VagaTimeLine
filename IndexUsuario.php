@@ -19,8 +19,9 @@
 							<ul class="nav navbar-nav ">
 								<li><a href="?p=home"  title="Home Page">Home</a></li>
 								<li> <a href=Logout.php>Sair</a></li>
-								<li> <a href="?p=VerCadastroUsuario.php" title="ver cadastro">VerCadastro</a></li>
-								<li><a href=buscarusuarioexcluir.php  title="excluir cadastro">Excluir</a></li> 
+								<li> <a href=VerCadastroUsuario.php title="ver cadastro">VerCadastro</a></li>
+								<li><a href=BuscarusuarioEditar.php  title="Editar cadastro">Editar</a></li> 
+								<li><a href=BuscarusuarioExcluir.php  title="excluir cadastro">Excluir</a></li> 
 								<li> <a href="?p=sobre" title="Sobre">Sobre</a></li>   
 							</ul>
 						</div>

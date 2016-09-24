@@ -20,11 +20,16 @@
 						<div class="navbar-inner">
 							<ul class="nav navbar-nav ">
 								<li><a href="?p=home"  title="Home Page">Home</a></li>
-								<li> <a href="?p=sobre" title="Sobre">Sobre</a></li>   
+								<li> <a href="?p=sobre" title="Sobre">Sobre</a></li> 
+							</ul>
+							<ul class="nav navbar-nav pull-right">
+								<li> <a href="Login.php" title="Login">Login</a></li> 
+								<li> <a href="Cadastrar.php" title="Cadastrar">Cadastrar</a></li> 
 							</ul>
 						</div>
 					</div>
 				</div>
+				<h3>Olá Usuario faça Login ou Cadastre-se </h3>
 				<div class="container body-content">
 					<div class="span12">
 						<?php        

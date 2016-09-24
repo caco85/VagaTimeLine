@@ -12,7 +12,6 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha'])))
  mysql_connect('localhost', 'root', '');
 
 $banco = mysql_select_db('db_vtimeline');
-
 $login = mysql_real_escape_string($_POST['login']);
 $senha = mysql_real_escape_string($_POST['senha']);
 

@@ -95,7 +95,6 @@ else
             
           </div>
         </div>
-    
         <div class"row">
           <footer>
             <p>&copy; Vagalume TimeLine 2016- Todos os Diretos Resevados.</p>
